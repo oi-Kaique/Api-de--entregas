@@ -1,0 +1,3 @@
+class AppError {
+  message: string;
+}
