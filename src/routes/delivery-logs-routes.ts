@@ -16,4 +16,11 @@ deliveryLogsRoutes.post(
 
 )
 
+deliveryLogsRoutes.get(
+  "/:delivery_id/show",
+  ensureAuthenticated,
+  verifyUserAuthorization(["sale", "customer"]),
+  deliveryLogsController.show
+)
+
 export { deliveryLogsRoutes }
