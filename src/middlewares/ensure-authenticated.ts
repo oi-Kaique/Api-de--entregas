@@ -33,3 +33,5 @@ function ensureAuthenticated( request: Request, response: Response, next: NextFu
     throw new AppError( "Invalid JWT token", 201 )
   }
 }
+
+export { ensureAuthenticated }
